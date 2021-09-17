@@ -1,0 +1,44 @@
+<p>add-movies works!</p>
+
+
+
+  
+ <div fxLayoutAlign="center center" fxFlexFill class="block">
+  <mat-card fxFlex="25">
+    <mat-toolbar class="header"  fxFlexFill>SIGNUP</mat-toolbar>
+    <form (ngSubmit)="updateMovie()" fxLayoutAlign="stretch" fxLayout="column" class="login">
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input  matInput  placeholder="First Name" name="firstname" #firstname="ngModel"  [(ngModel)]="movie.name"required>
+      
+      
+      
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Second Name</mat-label>
+      <input matInput placeholder="Second Name" name="secondname" #secondname="ngModel"  [(ngModel)]="movie.amount" required>
+      
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="pat@example.com" name="email" #email="ngModel"  [(ngModel)]="movie.genres">
+      
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="password" name="password" #password="ngModel"  [(ngModel)]="movie.duration">
+      
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Re-type Password</mat-label>
+      <input matInput placeholder="Re-type Password" name="cofirmpassword" #confirmpassword="ngModel"  [(ngModel)]="movie.cast">
+      
+    </mat-form-field>
+  
+      <button mat-button  routerLinkActive="active" >Sign up</button>
+      
+    
+    </form>
+  </mat-card>
+</div>
+

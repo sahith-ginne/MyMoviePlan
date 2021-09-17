@@ -1,0 +1,24 @@
+<mat-toolbar class="toolbar">
+     
+  <div class="name">
+    <button mat-button  routerLink="/" routerLinkActive="active">MyMoviePlan</button>
+    <button mat-button routerLink = "/movies" routeLinkActive="active">Movies</button>
+    <!-- <button mat-button routerLink = "/" routerLinkActive="active">Romance</button> -->
+    <!-- <button mat-button routerLink = "/" routerLinkActive="active">Comedy</button> -->
+    <!-- <button mat-button routerLink = "/" routerLinkActive="active">Drama</button> -->
+  </div>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon style="color: red;">account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="accountcircle">
+    <button mat-menu-item style="text-align: center; " routerLink="/admin" routeLinkActive="active" >admin</button>
+    <button mat-menu-item style="text-align: center;" routerLink="/user" routerLinkActive="active">user</button>
+    
+  </mat-menu>
+
+  
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>

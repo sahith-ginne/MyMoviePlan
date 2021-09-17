@@ -1,0 +1,23 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+      <mat-toolbar class="header"  fxFlexFill >LOGIN</mat-toolbar>
+      <form fxLayoutAlign="stretch" fxLayout="column" class="login">
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput placeholder="pat@example.com" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>password</mat-label>
+        <input matInput placeholder="password" required>
+      </mat-form-field>
+      <mat-checkbox class="checkbox">Remember me</mat-checkbox>
+      
+        <button mat-button routerLink="/manage" routerLinkActive="active">sign in</button>
+        <button mat-button class="button"  routerLink="/admin-register" routerLinkActive="active">New user? click here for signup</button>
+      
+      </form>
+    </mat-card>
+  </div>
+  
+  
+  

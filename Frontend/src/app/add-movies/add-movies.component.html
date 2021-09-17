@@ -1,0 +1,51 @@
+<p>add-movies works!</p>
+
+
+
+  
+  
+<div fxLayoutAlign="center center" fxFlexFill class="block">
+  <mat-card fxFlex="25">
+    <mat-toolbar class="header"  fxFlexFill>MOVIES</mat-toolbar>
+    <form (ngSubmit)="createMovie()" fxLayoutAlign="stretch" fxLayout="column" class="login">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input  matInput  placeholder="Movie name" name="moviename" #moviename="ngModel"  [(ngModel)]="movie.name"required>
+      
+      <!-- [(ngModel)] = "user.firstname" name="firstname"> -->
+      
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="Price" name="price" #price="ngModel"  [(ngModel)]="movie.amount" required>
+      <!-- [(ngModel)] = "user.secondname" name="secondname"> -->
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Genres</mat-label>
+      <input matInput placeholder="genres" name="genres" #genres="ngModel"  [(ngModel)]="movie.genres">
+      <!-- [(ngModel)] = "user.email" name="email"> -->
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Duration</mat-label>
+      <input matInput placeholder="duration" name="duration" #duration="ngModel"  [(ngModel)]="movie.duration">
+      <!-- [(ngModel)] = "user.password" name="password"> -->
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Cast</mat-label>
+      <input matInput placeholder="cast" name="cast" #cast="ngModel"  [(ngModel)]="movie.cast">
+      <!-- [(ngModel)] = "user.password" name="password"> -->
+    </mat-form-field>
+  
+      <button mat-button  routerLinkActive="active" >Sign up</button>
+      
+    
+    </form>
+  </mat-card>
+</div>
+
+
+
+
+
+  
+

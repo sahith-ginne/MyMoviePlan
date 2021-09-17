@@ -1,0 +1,47 @@
+
+<div fxLayoutAlign="center center" fxFlexFill class="block">
+    <mat-card fxFlex="25">
+      <mat-toolbar class="header"  fxFlexFill>SIGNUP</mat-toolbar>
+      <form (ngSubmit)="createUser()" fxLayoutAlign="stretch" fxLayout="column" class="login">
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input  matInput  placeholder="First Name" name="firstname" #firstname="ngModel"  [(ngModel)]="user.firstname"required>
+        
+        <!-- [(ngModel)] = "user.firstname" name="firstname"> -->
+        
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Second Name</mat-label>
+        <input matInput placeholder="Second Name" name="secondname" #secondname="ngModel"  [(ngModel)]="user.secondname" required>
+        <!-- [(ngModel)] = "user.secondname" name="secondname"> -->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="pat@example.com" name="email" #email="ngModel"  [(ngModel)]="user.email">
+        <!-- [(ngModel)] = "user.email" name="email"> -->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="password" name="password" #password="ngModel"  [(ngModel)]="user.password">
+        <span *ngIf="password.touched && password.errors?.required">password required</span>
+        <span *ngIf="confirmpassword.touched && confirmpassword.errors?.MustMatched">password must match</span>
+        <!-- [(ngModel)] = "user.password" name="password"> -->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Re-type Password</mat-label>
+        <input matInput placeholder="Re-type Password" name="cofirmpassword" #confirmpassword="ngModel"  [(ngModel)]="user.confirmpassword">
+        <span *ngIf="confirmpassword.touched && confirmpassword.errors?.required">password required</span>
+        <span *ngIf="confirmpassword.touched && confirmpassword.errors?.MustMatched">password must match</span>
+        <!-- [(ngModel)] = "user.password" name="password"> -->
+      </mat-form-field>
+    
+        <button mat-button  routerLinkActive="active" >Sign up</button>
+        
+      
+      </form>
+    </mat-card>
+  </div>
+
+  
+  
+

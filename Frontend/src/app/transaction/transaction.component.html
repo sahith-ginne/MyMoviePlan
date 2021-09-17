@@ -1,0 +1,41 @@
+
+
+
+<div fxLayoutAlign="center center" fxFlexFill class="block">
+    <mat-card fxFlex="50">
+      <mat-toolbar class="header"  fxFlexFill>PAYMENT GATEWAY</mat-toolbar>
+      <form  fxLayoutAlign="stretch" fxLayout="column">
+      <mat-form-field>
+        <mat-label>Card Number</mat-label>
+        <input  matInput  placeholder="Number">
+        
+        
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Card Holder Name</mat-label>
+        <input matInput placeholder="Name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Card Expire Date</mat-label>
+        <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+    
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>CVV</mat-label>
+        <input matInput placeholder="CVV" >
+      
+      </mat-form-field>
+      
+      <button mat-button  routerLink="/confirmation" routerLinkActive="active">Proceed to pay</button>
+        <!-- <button mat-button  routerlink="/confirmation" routerLinkActive="active" >proceed</button> -->
+        
+      
+      </form>
+    </mat-card>
+  </div>
+
+  
+  
+
